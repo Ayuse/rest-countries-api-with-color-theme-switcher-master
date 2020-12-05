@@ -22,7 +22,7 @@ Variables
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBackground: #f1f5f8;
+  --mainBackground: #1c2329;
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
@@ -52,10 +52,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--mainBlack);
-  background: var(--mainBackground);
+  /* background: var(--mainBackground); */
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
+  /* height: 100vh; */
 }
 h1,
 h2,
@@ -93,6 +94,11 @@ img {
   box-shadow: 5px 5px 15px #2c2c2cd8, 5px 5px 15px   #3ad3c611;
   
   
+}
+
+.main-img{
+  width: 240px;
+  height: 160px;
 }
 
 .select{
@@ -161,4 +167,32 @@ height: 100%;
 }
 .hero-container.dark{
   background-color: var(--VeryDarkBlue);
+}
+
+.secondary-container{
+display: flex;
+margin: 10px 0 0 30px;
+justify-content: center;
+gap: 10rem;
+align-items: center;
+
+}
+
+.secondary-img{
+  width: 30rem;
+}
+
+.text-container{ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.borders{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  
 }

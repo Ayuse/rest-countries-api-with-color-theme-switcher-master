@@ -11,24 +11,23 @@ const CountryList = ({ name, population, capital, region, flag }) => {
       <div
         className={`${isDarkMode ? 'single-country dark' : 'single-country'}`}
       >
-        <button>
-          <Link to={`/country/${name}`}>More details</Link>
-        </button>
-        <picture>
-          <img src={flag} alt='' />
-        </picture>
-        <div className='info'>
-          <h3>{name}</h3>
-          <p>
-            <strong>Population:</strong> {population}
-          </p>
-          <p>
-            <strong>Region:</strong> {region}
-          </p>
-          <p>
-            <strong>Capital:</strong> {capital}
-          </p>
-        </div>
+        <Link to={`/country/${name}`}>
+          <picture>
+            <img src={flag} alt='' className='main-img' />
+          </picture>
+          <div className='info'>
+            <h3>{name}</h3>
+            <p>
+              <strong>Population:</strong> {population}
+            </p>
+            <p>
+              <strong>Region:</strong> {region}
+            </p>
+            <p>
+              <strong>Capital:</strong> {capital}
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
   );

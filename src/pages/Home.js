@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useGlobalContext } from '../context';
 import CountryList from '../components/CountryList';
+import Loading from '../components/Loading';
 
 import Flag from '../images/Flag.jpg';
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
             onChange={() => setSearchTerm(searchInput.current.value)}
           />
         </div>
+
         <select
           className={`${isDarkMode ? 'select dark' : 'select'}`}
           name=''
@@ -45,11 +47,27 @@ const Home = () => {
         </select>
       </div>
 
-      <div className='country-container'>
-        {countries.map((country, index) => {
-          return <CountryList key={index} {...country} />;
-        })}
-      </div>
+      {countries?.length > 0 ? (
+        <div className='country-container'>
+          {countries.map((country, index) => {
+            return <CountryList key={index} {...country} />;
+          })}
+        </div>
+      ) : (
+        <div className='country-container'>
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+        </div>
+      )}
     </div>
   );
 };
